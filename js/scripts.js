@@ -1,5 +1,5 @@
 /*
- * This work is licensed under the Creative Commons Attribution-NonCommercial 4.0 International License. 
+ * This work is licensed under the Creative Commons Attribution-NonCommercial 4.0 International License.
  * To view a copy of this license, visit http://creativecommons.org/licenses/by-nc/4.0/.
  * Copyright (c) 2016 Julian Garnier
  */
@@ -16,19 +16,20 @@ window.onload = function() {
     var hours =  date.getHours();
     var minutes =  date.getMinutes();
     var current = hours + (minutes * .01);
-    if (current >= 5 && current < 19) return 'Have a nice day';
-    if (current >= 19 && current < 22) return 'Have a nice evening';
-    if (current >= 22 || current < 5) return 'Have a good night';
+    if (current >= 5 && current < 19) return 'Have a nice day '+"现在是 "+hours+':'+minutes;
+    if (current >= 19 && current < 22) return '晚上好呀！'+"现在是 "+hours+':'+minutes;
+    if (current >= 22 || current < 5) return '深夜好呀！'+"现在是 "+hours+':'+minutes;
   }
 
   var messages = [
-    'Hey there 👋',
-    'I\'m Julian',
-    'I design and code things on the web',
-    'I\'m currently accepting freelance work.<br> You can contact me at <a href="mailto:hello@julian.gr">hello@julian.gr</a>',
-    '<a target="_blank" href="https://twitter.com/juliangarnier">twitter.com/juliangarnier</a><br><a target="_blank" href="https://codepen.io/juliangarnier">codepen.io/juliangarnier</a><br><a target="_blank" href="https://github.com/juliangarnier">github.com/juliangarnier</a>',
+    '小真真好啊 👋',
+    'I\'m 你老公',
+    '今天吃饱饱了吗？',
+    '今日份的屎拉了吗？',
+    '如果都做了，不如来看看这些吧.<br> 爱你的痕迹呢 <a href="http://blog.lee-xzz.xyz/oneSentenceOneDay/">oneSentenceOneDay</a>',
+    '<a target="_blank" href="http://blog.lee-xzz.xyz/SevenLove/">SevenLove</a><br><a target="_blank" href="https://blog.lee-xzz.xyz/Timer/">Timer</a><br><a target="_blank" href="http://blog.lee-xzz.xyz/h5-love/">h5-love</a><br><a target="_blank" href="https://test.lee-xzz.xyz/">love_predict</a>',
     getCurrentTime(),
-    '👀 J.'
+    '👀 爱你'
   ]
 
   var getFontSize = function() {
