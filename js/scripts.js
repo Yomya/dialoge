@@ -20,14 +20,26 @@ window.onload = function() {
     if (current >= 19 && current < 22) return '晚上好呀！'+"现在是 "+hours+':'+minutes;
     if (current >= 22 || current < 5) return '深夜好呀！'+"现在是 "+hours+':'+minutes;
   }
-
+// 随机返回一个称呼
+  var myName = ['小真真','大美真','真真','阿真','老婆','美真真','美丽的真真','活泼的真真','温柔的真真']
+  var getCurrentmyName = function () {
+    return myName[Math.round(myName.length*Math.random())]+'好呀👋';
+  }
+// 随机返回一个问题
+  var myQ = ['过来撒娇呀','今天吃饱饱了吗？','今日份的屎拉了吗？',
+  '今天又涂美美哒口红了吗？','要不要过来捏捏jio呀','老公给你暖jio呀',
+  '好想你的呀','老婆在干嘛呢','好想真真的呀','真真在看尬味视频吗',
+  '真真在看沙雕视频吗？','真真在悄悄干嘛呢？','又是想念真真的一天呢','素颜真真的颜值是无敌的呢']
+  var getCurrentmyQ = function () {
+    return myQ[Math.round(myQ.length*Math.random())];
+  }
   var messages = [
-    '小真真好啊 👋',
+    getCurrentmyName(),
     'I\'m 你老公',
-    '今天吃饱饱了吗？',
-    '今日份的屎拉了吗？',
+    getCurrentmyQ(),
+    getCurrentmyQ(),
     '如果都做了，不如来看看这些吧.<br> 爱你的痕迹呢 <a href="http://blog.lee-xzz.xyz/oneSentenceOneDay/">oneSentenceOneDay</a>',
-    '<a target="_blank" href="http://blog.lee-xzz.xyz/SevenLove/">SevenLove</a><br><a target="_blank" href="https://blog.lee-xzz.xyz/Timer/">Timer</a><br><a target="_blank" href="http://blog.lee-xzz.xyz/h5-love/">h5-love</a><br><a target="_blank" href="https://test.lee-xzz.xyz/">love_predict</a>',
+    '<a target="_blank" href="http://blog.lee-xzz.xyz/SevenLove/">SevenLove</a><br><a target="_blank" href="https://blog.lee-xzz.xyz/Timer/">Timer</a><br><a target="_blank" href="http://blog.lee-xzz.xyz/h5-love/">h5-love</a><br><a target="_blank" href="https://test.lee-xzz.xyz/">love_predict</a><br><a target="_blank" href="http://blog.lee-xzz.xyz/todoList/">TodoList</a>',
     getCurrentTime(),
     '👀 爱你'
   ]
